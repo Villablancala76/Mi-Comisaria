@@ -1,0 +1,97 @@
+Viewed app.js:1-546
+Edited app.js
+
+He actualizado el archivo `app.js` asignando nombres técnicos a todos los botones que faltaban y activando la función de descarga real.
+
+A partir de ahora, cuando hagas clic en un botón, la aplicación buscará el archivo dentro de la carpeta `assets/`.
+
+### 📋 Lista Completa de Archivos Requeridos
+Crea una carpeta llamada `assets` y guarda tus documentos con estos nombres exactos:
+
+#### 🔹 SECCIÓN: INICIO
+*   **EXPOSICIÓN:** `exposicion_plantilla.docx`
+
+#### 🔹 SECCIÓN: DENUNCIAS
+*   **Judicial:** `denuncia_judicial.docx`
+*   **Administrativa Civil:** `denuncia_admin_civil.docx`
+*   **Contravencional:** `denuncia_contravencional.docx`
+*   **Administrativa Policial:** `denuncia_admin_policial.docx`
+*   **Ley 2785:** `ley_2785.docx`
+*   **Ley 2786:** `ley_2786.docx`
+*   **Ley 2302:** `ley_2302.docx`
+*   **A. R. T.:** `denuncia_art.docx`
+
+#### 🔹 SECCIÓN: ACTAS
+*   **Procedimiento:** `acta_procedimiento.docx`
+*   **Secuestro:** `acta_secuestro.docx`
+*   **Allanamiento:** `acta_allanamiento.docx`
+*   **Secuestro Automotor:** `acta_secuestro_automotor.docx`
+*   **Secuestro Motocicleta:** `acta_secuestro_motocicleta.docx`
+*   **Cadena de Custodia:** `acta_cadena_custodia.docx`
+*   **Persona Aprehendida:** `acta_persona_aprehendida.docx`
+*   **Parte Moviles JP:** `acta_parte_moviles_jp.docx`
+*   **Entrega de Elementos:** `acta_entrega_elementos.docx`
+*   **Levantamiento imagenes:** `acta_levantamiento_imagenes.docx`
+
+#### 🔹 SECCIÓN: NOTIFICACIONES
+*   **Del Personal:** `notificacion_personal.docx`
+*   **Imputacion Causa Judicial:** `notificacion_imputacion_judicial.docx`
+*   **Libertad Supeditada:** `notificacion_libertad_supeditada.docx`
+*   **Ingreso A.A.:** `notificacion_ingreso_aa.docx`
+*   **Detención:** `notificacion_detencion.docx`
+*   **Citación Administrativa:** `notificacion_citacion_admin.docx`
+*   **Libertad A.A.:** `notificacion_libertad_aa.docx`
+*   **Exposición:** `notificacion_exposicion.docx`
+*   **Citación Judicial:** `notificacion_citacion_judicial.docx`
+*   **Libertad Contravencional:** `notificacion_libertad_contravencional.docx`
+*   **Medidas Cautelares:** `notificacion_medidas_cautelares.docx`
+
+#### 🔹 SECCIÓN: CERTIFICADOS
+*   **De Denuncia:** `certificado_denuncia.docx`
+*   **De Estadia:** `certificado_estadia.docx`
+*   **De Domicilio S/T:** `certificado_domicilio_st.docx`
+*   **No Voto:** `certificado_no_voto.docx`
+*   **De Supervivencia:** `certificado_supervivencia.docx`
+*   **De Domicilio C/T:** `certificado_domicilio_ct.docx`
+*   **Certificado Medico:** `certificado_medico.docx`
+*   **Certificado Medico Menor:** `certificado_medico_menor.docx`
+
+#### 🔹 SECCIÓN: MEMORANDUMS
+*   **Informar Procedimiento:** `memo_informar_procedimiento.docx`
+*   **Informar Novedad:** `memo_informar_novedad.docx`
+*   **Informar A.R.T.:** `memo_informar_art.docx`
+*   **Solicitar Service:** `memo_solicitar_service.docx`
+*   **Informar Siniestro Movil:** `memo_informar_siniestro_movil.docx`
+
+#### 🔹 SECCIÓN: LEYES Y REGLAMENTOS
+*   **Ley 3516:** `ley_3516.docx`
+*   **Ley 1284:** `ley_1284.docx`
+*   **Ley 3358:** `ley_3358.docx`
+*   **Ley 611 ISSN:** `ley_611_issn.docx`
+*   **R.A.A.P.:** `reglamento_raap.docx`
+*   **R.I.U.O.P.:** `reglamento_riuop.docx`
+*   **R.R.C.P.:** `reglamento_rrcp.docx`
+*   **R.R.P.P.:** `reglamento_rrpp.docx`
+*   **R.R.D.P.:** `reglamento_rrdp.docx`
+*   **R.R.L.P.:** `reglamento_rrlp.docx`
+
+#### 🔹 SECCIÓN: CARATULAS
+*   **I.S.D:** `caratula_isd.docx`
+*   **A.S.D:** `caratula_asd.docx`
+*   **105 R.A.A.P.:** `caratula_105_raap.docx`
+*   **98.1 R.A.A.P.:** `caratula_98_1_raap.docx`
+*   **JUDICIAL:** `caratula_judicial.docx`
+*   **A. A.:** `caratula_aa.docx`
+*   **CONTRAVENCIONAL:** `caratula_contravencional.docx`
+*   **98.2 R.A.A.P.:** `caratula_98_2_raap.docx`
+
+#### 🔹 SECCIÓN: LEY 23737
+*   **Acta Procedimiento:** `ley23737_acta_procedimiento.docx`
+*   **Derechos del Imputado:** `ley23737_derechos_imputado.docx`
+*   **Ley 23737 (Texto):** `ley_23737_texto.docx`
+*   **Recomendaciones:** `ley23737_recomendaciones.docx`
+
+#### 🔹 SECCIÓN: HIMNOS (MP3)
+*(Se mantienen los nombres anteriores: `himno_nacional_canto.mp3`, `marcha_malvinas.mp3`, etc.)*
+
+**¿Deseas que te ayude con el contenido de algún acta o certificado en especial para que puedas armar los Word?**

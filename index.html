@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Comisaria Virtual</title>
+    <!-- Use Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CONTENIDO DE AUTENTICACION -->
+    <div id="auth-wrapper" class="auth-wrapper">
+        <!-- PANTALLA LOGIN -->
+        <div id="login-container" class="auth-card">
+            <img src="ESCUDO2024OFICIAL.png" alt="Logo Policia" class="auth-logo">
+            <h2 class="auth-title">INICIAR SESIÓN</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" id="login-lp" placeholder="L.P. (Legajo Personal)" list="saved-lps" inputmode="numeric" pattern="\d{6}" maxlength="6" required title="Ingrese exactamente 6 dígitos numéricos">
+                    <datalist id="saved-lps"></datalist>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="login-pass" placeholder="Contraseña" required>
+                    <button type="button" class="btn-toggle-pass" onclick="togglePassword('login-pass', this)" title="Mostrar/Ocultar contraseña">
+                        🔒
+                    </button>
+                </div>
+                <button type="submit" class="btn btn-auth">INGRESAR</button>
+            </form>
+            <p class="auth-footer">¿No tenés cuenta? <a href="#" onclick="showRegister()">Registrate acá</a></p>
+        </div>
+
+        <!-- PANTALLA REGISTRO -->
+        <div id="register-container" class="auth-card hidden">
+            <img src="ESCUDO2024OFICIAL.png" alt="Logo Policia" class="auth-logo">
+            <h2 class="auth-title">NUEVO REGISTRO</h2>
+            <form id="register-form">
+                <div class="input-group">
+                    <input type="text" id="reg-nombre" placeholder="Nombre y Apellido" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="reg-dni" placeholder="D.N.I." required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="reg-lp" placeholder="L.P. (Legajo Personal)" inputmode="numeric" pattern="\d{6}" maxlength="6" required title="Ingrese exactamente 6 dígitos numéricos">
+                </div>
+                <div class="input-group">
+                    <input type="email" id="reg-email" placeholder="Correo @polneuquen.gob.ar" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="reg-pass" placeholder="Crear Contraseña" required>
+                    <button type="button" class="btn-toggle-pass" onclick="togglePassword('reg-pass', this)" title="Mostrar/Ocultar contraseña">
+                        🔒
+                    </button>
+                </div>
+                <button type="submit" class="btn btn-auth">REGISTRARSE</button>
+            </form>
+            <p class="auth-footer">¿Ya tenés cuenta? <a href="#" onclick="showLogin()">Iniciá sesión</a></p>
+        </div>
+
+        <!-- PANTALLA VERIFICACIÓN -->
+        <div id="verify-container" class="auth-card hidden">
+            <img src="ESCUDO2024OFICIAL.png" alt="Logo Policia" class="auth-logo">
+            <h2 class="auth-title">VERIFICAR CORREO</h2>
+            <p class="auth-info">Se envió un código de 6 dígitos a su correo oficial.</p>
+            <form id="verify-form">
+                <div class="input-group">
+                    <input type="text" id="verify-code" placeholder="Código de 6 dígitos" maxlength="6" required>
+                </div>
+                <button type="submit" class="btn btn-auth">VERIFICAR</button>
+            </form>
+            <p class="auth-footer"><a href="#" onclick="showRegister()">Volver al registro</a></p>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL (App) -->
+    <div id="app-wrapper" class="app-container hidden">
+        <!-- HEADER PÚBLICO -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="ESCUDO2024OFICIAL.png" alt="Logo Policia" class="logo" id="logo-img">
+            </div>
+            
+            <div class="title-container">
+                <h1 class="main-title">MI COMISARIA 2.0</h1>
+                <h2 class="sub-title">BIENVENIDO A GESTION DE TRAMITES</h2>
+            </div>
+            
+            <div class="exit-container">
+                <button class="btn btn-exit-small" onclick="salirApp()" title="Cerrar sesión">SALIR</button>
+            </div>
+        </header>
+
+        <!-- BOTÓN FLOTANTE MAPA DEL SITIO -->
+        <button class="btn btn-sitemap-float" onclick="navigateTo('sitemap')" title="Ver mapa del sitio">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+        </button>
+
+        <!-- CONTENIDO DINÁMICO (PANTALLA) -->
+        <main class="main-content" id="screen-container">
+            <!-- La estructura de título, subtítulo y botones se inyectará aquí desde JS -->
+        </main>
+
+        <!-- FOOTER / NAVEGACIÓN -->
+        <footer class="footer">
+            <div class="nav-controls">
+                <button class="btn btn-nav" onclick="goBack()" id="btn-anterior" disabled>ANTERIOR</button>
+                <button class="btn btn-nav" onclick="goHome()" id="btn-inicio">INICIO</button>
+                <button class="btn btn-nav" onclick="goForward()" id="btn-siguiente" disabled>SIGUIENTE</button>
+            </div>
+            <div class="credits">
+                <p id="contact-credit" class="clickable-credit" title="Haga click para enviar una sugerencia" onclick="openSuggestion()">Comisario Luis Alfredo Villablanca - Tel: 2948451453</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Referencia al archivo de lógica -->
+    <script src="app.js"></script>
+    
+    <!-- Script mínimo para capturar errores de imagen -->
+    <script>
+        document.getElementById('logo-img').onerror = function() {
+            this.src = 'https://via.placeholder.com/150x150.png?text=Falta+Logo';
+        };
+    </script>
+</body>
+</html>
